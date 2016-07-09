@@ -1,3 +1,11 @@
+# legco-data
+
+### Inventory
+- Check Google Spreadsheet currently
+
+## Glosary and code
+- [glossary.csv](glossary.csv)
+
 - Electors
   - Registered
 - turnout
