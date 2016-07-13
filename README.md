@@ -13,7 +13,7 @@ Data in json should use 4 space indent, where keys are sorted with case-by-case 
 
 ## TODO
 - list of open data requests
-- avoid duplication as much as possible for easier maintence 
+- avoid duplication as much as possible for easier maintence
 
 ## Glosary and code
 - [glossary.csv](glossary.csv)
@@ -44,5 +44,5 @@ Data in json should use 4 space indent, where keys are sorted with case-by-case 
 ## LICENSE
 - Official Data source in the repository are under license of HKSAR, unless otherwise specified
 - All other code and format are under *MIT license*.
-- Please attribute Initium Media in scenario of using original or derived data or graphics.
+- Please attribute Initium Media in scenario of using cleaned / derived data or graphics.
 - All data are under best-effort continuous proofreading, please help to submit any issues found and note no guarantee cannot be provided for usage for data.
