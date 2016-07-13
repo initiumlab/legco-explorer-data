@@ -6,22 +6,6 @@
 ## Glosary and code
 - [glossary.csv](glossary.csv)
 
-## visual hint
-- ask people to zoom, clickable
-- sharable
-- resopnsive design
-- comparsion??
-  - with district / hk average
-
-## navigation
-- search feature? too hard to type on mobile, desktop is fine
-- choice is much better,  for really advanced only
-
-## map design
-- make more sense for top label
-- empty layers
- - http://plnkr.co/edit/v7sICO?p=preview
-
 ## Conventions
 ### Data
 #### Numbers
