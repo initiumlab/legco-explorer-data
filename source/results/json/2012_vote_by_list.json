@@ -118,55 +118,55 @@
       "seats":1
     },
     "10": {
-			"ordered_candidates": ["張超雄", "郭永健"],
-			"votes": 39650,
-			"seats": 1
+       "ordered_candidates": ["張超雄", "郭永健"],
+	"votes": 39650,
+	"seats": 1
+    },
+    "11": {
+	"ordered_candidates": ["蔡耀昌","區鎮樺","麥潤培","鄺美娜"],
+	"votes": 10028,
+	"seats": 0
+    },
+    "12": {
+	"ordered_candidates": ["范國威", "任啓邦", "梁里", "梁永雄", "關永業", "丘文俊","鍾錦麟","張國強","容溟舟"],
+	"votes": 28621,
+	"seats": 1
+    },
+    "13": {
+	"ordered_candidates": ["田北俊", "周梁淑怡", "梁志偉", "廖國華"],
+	"votes": 31016,
+	"seats": 1
 		},
-		"11": {
-			"ordered_candidates": ["蔡耀昌","區鎮樺","麥潤培","鄺美娜"],
-			"votes": 10028,
-			"seats": 0
+    "14": {
+	"ordered_candidates": ["黃成智","羅世恩"],
+	"votes": 21118,
+	"seats": 0
+    },
+    "15": {
+	"ordered_candidates": ["湯家驊", "楊岳橋"],
+	"votes": 32753,
+	"seats": 1
 		},
-		"12": {
-			"ordered_candidates": ["范國威", "任啓邦", "梁里", "梁永雄", "關永業", "丘文俊","鍾錦麟","張國強","容溟舟"],
-			"votes": 28621,
-			"seats": 1
-		},
-		"13": {
-			"ordered_candidates": ["田北俊", "周梁淑怡", "梁志偉", "廖國華"],
-			"votes": 31016,
-			"seats": 1
-		},
-		"14": {
-			"ordered_candidates": ["黃成智","羅世恩"],
-			"votes": 21118,
-			"seats": 0
-		},
-		"15": {
-			"ordered_candidates": ["湯家驊", "楊岳橋"],
-			"votes": 32753,
-			"seats": 1
-		},
-		"16": {
-			"ordered_candidates": ["何民傑"],
-			"votes": 2875,
-			"seats": 0
-		},
-		"17": {
-			"ordered_candidates": ["龐一鳴"],
-			"votes": 6031,
-			"seats": 0
-		},
-		"18": {
-			"ordered_candidates": ["方國珊"],
-			"votes": 24594,
-			"seats": 0
-		},
-		"19": {
-			"ordered_candidates": ["陳國強"],
-			"votes": 2327,
-			"seats": 0
-		}		   
+    "16": {
+	"ordered_candidates": ["何民傑"],
+	"votes": 2875,
+	"seats": 0
+    },
+    "17": {
+	"ordered_candidates": ["龐一鳴"],
+	"votes": 6031,
+	"seats": 0
+    },
+    "18": {
+	"ordered_candidates": ["方國珊"],
+	"votes": 24594,
+	"seats": 0
+    },
+    "19": {
+	"ordered_candidates": ["陳國強"],
+	"votes": 2327,
+	"seats": 0
+    }		   
   },
   "ntw":{
      "1":{
@@ -215,40 +215,40 @@
       "seats":0
     },
     "10": {
-			"ordered_candidates": ["陳一華"],
-			"votes": 11997,
-			"seats": 0
+	"ordered_candidates": ["陳一華"],
+	"votes": 11997,
+	"seats": 0
 		},
-		"11": {
-			"ordered_candidates": ["梁耀忠","黃潤達"],
-			"votes": 43799,
-			"seats": 1
+   "11": {
+	"ordered_candidates": ["梁耀忠","黃潤達"],
+	"votes": 43799,
+	"seats": 1
+    },
+   "12": {
+	"ordered_candidates": ["陳恒鑌", "潘志成", "林琳", "陳振中", "羅崑", "梁嘉銘","曾大"],
+	"votes": 36555,
+	"seats": 1
+    },
+   "13": {
+	"ordered_candidates": ["陳強", "丁衍華", "蘇嘉雯", "鄒秉恬","鄧家良","潘小屏","GURUNG RAJU"],
+	"votes": 16767,
+	"seats": 0
+    },
+   "14": {
+	"ordered_candidates": ["李永達","林立志","黎敬瑋"],
+	"votes": 32792,
+	"seats": 0
+    },
+   "15": {
+	"ordered_candidates": ["李卓人", "譚駿賢"],
+	"votes": 40967,
+	"seats": 1
 		},
-		"12": {
-			"ordered_candidates": ["陳恒鑌", "潘志成", "林琳", "陳振中", "羅崑", "梁嘉銘","曾大"],
-			"votes": 36555,
-			"seats": 1
-		},
-		"13": {
-			"ordered_candidates": ["陳強", "丁衍華", "蘇嘉雯", "鄒秉恬","鄧家良","潘小屏","GURUNG RAJU"],
-			"votes": 16767,
-			"seats": 0
-		},
-		"14": {
-			"ordered_candidates": ["李永達","林立志","黎敬瑋"],
-			"votes": 32792,
-			"seats": 0
-		},
-		"15": {
-			"ordered_candidates": ["李卓人", "譚駿賢"],
-			"votes": 40967,
-			"seats": 1
-		},
-		"16": {
-			"ordered_candidates": ["譚耀宗","龍瑞卿","葉文斌","巫成鋒"],
-			"votes": 43496,
-			"seats": 1
-		}
+   "16": {
+	"ordered_candidates": ["譚耀宗","龍瑞卿","葉文斌","巫成鋒"],
+	"votes": 43496,
+	"seats": 1
+    }
   },
   "kle":{
      "1":{
