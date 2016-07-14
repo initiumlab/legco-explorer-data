@@ -6,29 +6,30 @@
       "seats":0
     },
     "2":{
-      "ordered_candidates":["單仲偕","楊森","柴文瀚","鄭麗琼","梁淑楨","許智峯"],
-      "votes":40558,
+      "ordered_candidates":["何秀蘭"],
+      "votes":30887,
       "seats":1
     },
     "3":{
-      "ordered_candidates":["勞永樂"],
-      "votes":16900,
-      "seats":0
-    },
-    "4":{
-      "ordered_candidates":["劉嘉鴻","蕭若元","歐陽英傑"],
-      "votes":18667,
-      "seats":0
-    },
-    "5":{
-      "ordered_candidates":["鍾樹根","丁江浩","周潔冰","龔栢祥","顏尊廉","李均頤","鄭志成"],
-      "votes":33901,
+      "ordered_candidates":["甘乃威","楊森","徐遠華"],
+      "votes":39808,
       "seats":1
     },
-    "6":{
-      "ordered_candidates":["吳榮春"],
-      "votes":422,
+    "4":{
+      "ordered_candidates":["曾健成"],
+      "votes":10202,
       "seats":0
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     },
     "7":{
       "ordered_candidates":["何秀蘭","鄭司律","鍾松輝"],
