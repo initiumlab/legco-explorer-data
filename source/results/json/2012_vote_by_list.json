@@ -146,7 +146,7 @@
 	"ordered_candidates": ["湯家驊", "楊岳橋"],
 	"votes": 32753,
 	"seats": 1
-		},
+    },
     "16": {
 	"ordered_candidates": ["何民傑"],
 	"votes": 2875,
@@ -218,7 +218,7 @@
 	"ordered_candidates": ["陳一華"],
 	"votes": 11997,
 	"seats": 0
-		},
+    },
    "11": {
 	"ordered_candidates": ["梁耀忠","黃潤達"],
 	"votes": 43799,
@@ -243,7 +243,7 @@
 	"ordered_candidates": ["李卓人", "譚駿賢"],
 	"votes": 40967,
 	"seats": 1
-		},
+    },
    "16": {
 	"ordered_candidates": ["譚耀宗","龍瑞卿","葉文斌","巫成鋒"],
 	"votes": 43496,
