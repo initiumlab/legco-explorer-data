@@ -20,37 +20,40 @@
       "votes":10202,
       "seats":0
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    "5":{
+      "ordered_candidates":["曾鈺成","蔡素玉","鍾樹根","張國鈞","陳學鋒","郭偉强"],
+      "votes":60417,
+      "seats":1
+    },
+    "6":{
+      "ordered_candidates":["蕭敏華"],
+      "votes":1798,
+      "seats":0
     },
     "7":{
-      "ordered_candidates":["何秀蘭","鄭司律","鍾松輝"],
-      "votes":31523,
-      "seats":1
+      "ordered_candidates":["勞永樂"],
+      "votes":20523,
+      "seats":0
     },
     "8":{
-      "ordered_candidates":["葉劉淑儀","黃楚峰","謝子祺"],
-      "votes":30289,
-      "seats":1
+      "ordered_candidates":["陳淑莊","余若薇","容詠嫦"],
+      "votes":82600,
+      "seats":2
     },
     "9":{
-      "ordered_candidates":["王國興","潘佩璆","朱天樂","何毅淦","陳智恒"],
-      "votes":27336,
+      "ordered_candidates":["葉劉淑儀","史泰祖","黃健興","陳岳鵬"],
+      "votes":61073,
       "seats":1
     },
     "10":{
-      "ordered_candidates":["陳家洛","陳淑莊"],
-      "votes":70475,
-      "seats":1
+      "ordered_candidates":["黎志強"],
+      "votes":3955,
+      "seats":0
     },
+    
+    
+    
+    
     "11":{
       "ordered_candidates":["何家泰"],
       "votes":343,
