@@ -343,5 +343,42 @@
       "votes":37925,
       "seats":1
     }
+  },
+   "dc2":{
+     "801":{
+      "ordered_candidates":["何俊仁","鄺俊宇","林紹輝"],
+      "votes":228840,
+      "seats":1
+    },
+    "802":{
+      "ordered_candidates":["涂謹申","趙家賢","區諾軒"],
+      "votes":316468,
+      "seats":1
+    },
+    "803":{
+      "ordered_candidates":["白韻琹"],
+      "votes":61321,
+      "seats":0
+    },
+    "804":{
+      "ordered_candidates":["劉江華"],
+      "votes":199732,
+      "seats":0
+    },
+    "805":{
+      "ordered_candidates":["馮檢基","許錦成"],
+      "votes":262172,
+      "seats":1
+    },
+    "806":{
+      "ordered_candidates":["李慧","洪連杉","陳學鋒","朱立威","顏汶羽"],
+      "votes":277143,
+      "seats":1
+    },
+    "807":{
+      "ordered_candidates":["陳婉嫻","梁子穎","黃潤昌"],
+      "votes":246196,
+      "seats":1
+    }
   }
 }
