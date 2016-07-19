@@ -40,14 +40,14 @@ glob(paths+"*.+(xlsx|xls)", function (er, files) {
       }
       function insert(data, next) {
         [6,10,13,19,24].forEach(function (k) {
-          data.splice(k,0, next[k]);
+          data.splice(k-1,1, next[k]);
         });
         return data;
       }
 
       postProcessCsv = function (csvData) {
         results = [];
-        var HEADERS = ["age_group","category","a","b","c","d","hki_total","e","f","g","kle_total","h","j","klw_total","k","l","m","s","t","ntw_total","n","p","q","r","nte_total","total"];
+        var HEADERS = ["age_group","category","a","b","c","d","hki_total","e","f","g","klw_total","h","j","kle_total","k","l","m","s","t","ntw_total","n","p","q","r","nte_total","total"];
         results.push(HEADERS);
         csvData = parse(csvData)
           .forEach(function (row, i, rows) {
