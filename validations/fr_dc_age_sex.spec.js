@@ -18,14 +18,13 @@ describe('Final Register by District age and sex profile',function () {
         records.forEach(function (record, i) {
 
         describe(`${file} L:${i+1}`,function () {
-          it('should be correct',function () {
+          it('should add up total by district and total',function () {
             record= _.mapValues(record, utils.parseIntIfNumber);
             // TODO gen from mapping
             // geoMapping
             var expected={};
             var actual={};
             _.forEach(_.values(geoMapping),function (gc) {
-              console.log(gc.districts);
               var sum = _(record).pick(gc.districts).values().sum();
               var key = gc.alias+'_total';
               var total = record[key];
@@ -33,11 +32,48 @@ describe('Final Register by District age and sex profile',function () {
               actual[key] = sum;
               console.log('key %s, sum: %s, total: %s',key, sum, total);
             })
+            expected['total'] = _(expected).values().sum();
+            actual['total'] = record['total'];
             expect(actual).to.eql(expected);
+
 
           });
         });
         });
+
+//TODO check also sub-total
+        describe(`${file} Grand Total`,function () {
+          var agg = _.reduce(records,function (r,v,i) {
+            var category = v['category'];
+            if(i>=records.length-3){
+              return r;
+            }
+            //TODO extract remove keys
+            _(v).keys().without('category','age_group').forEach(function (k) {
+              if(!_.isEmpty(category)){
+                console.log('add');
+                console.log(utils.parseIntOrZero(v[k]));
+                console.log(utils.parseIntOrZero(r[category][k]));
+                r[category][k] = utils.parseIntOrZero(v[k]) + utils.parseIntOrZero(r[category][k]);
+              }
+            })
+            return r;
+          },{'M':{},'F':{},'Sub-total':{}})
+          function getExpected(age_group, category) {
+            var row = _.find(records, {'age_group':age_group, 'category':category});
+            return _(row).omit('category','age_group').mapValues(utils.parseIntOrZero).value();
+          }
+          it('should match M total',function () {
+            expect(agg['M']).to.eql(getExpected('Total','M'));
+          })
+          it('should match F total',function () {
+            expect(agg['F']).to.eql(getExpected('Total','F'));
+          })
+          it('should have Sub-total add up as total',function () {
+            expect(agg['Sub-total']).to.eql(getExpected('Grand Total',''));
+          })
+        })
+
       }catch(e){
         console.error('error in file');
         console.error(file);
