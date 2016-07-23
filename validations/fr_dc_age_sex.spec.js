@@ -16,7 +16,15 @@ describe('Final Register by District age and sex profile',function () {
         try{
         var records = parse(csvData, {columns:true ,trim: true });
         records.forEach(function (record, i) {
-
+          if(i===0){
+            describe(`${file} headers`,function () {
+              it('should match',function () {
+                var headers = ['year',"age_group","category","a","b","c","d","hki_total","e","f","g","klw_total","h","j","kle_total","k","l","m","s","t","ntw_total","n","p","q","r","nte_total","total"]
+                expect(_.keys(record)).to.eql(headers);
+              })
+            })
+          }
+          //TODO validate cat values
         describe(`${file} L:${i+1}`,function () {
           it('should add up total by district and total',function () {
             record= _.mapValues(record, utils.parseIntIfNumber);
