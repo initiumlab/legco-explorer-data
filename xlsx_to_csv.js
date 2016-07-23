@@ -53,7 +53,7 @@ glob(paths+"*.+(xlsx|xls)", function (er, files) {
       }
       function insert(data, next) {
         [6,10,13,19,24].forEach(function (k) {
-          data.splice(k,0, next[k]);
+          data.splice(k-1,1, next[k]);
         });
         return data;
       }
