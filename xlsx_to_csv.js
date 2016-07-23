@@ -12,7 +12,7 @@ var stringify = require('csv-stringify/lib/sync');
 
 var FR_DC_AGE_SEX = 'fr_dc_age_sex';
 var HEADERS={}
-HEADERS[FR_DC_AGE_SEX]= ["age_group","category","a","b","c","d","hki_total","e","f","g","kle_total","h","j","klw_total","k","l","m","s","t","ntw_total","n","p","q","r","nte_total","total"];
+HEADERS[FR_DC_AGE_SEX]= ["year","age_group","category","a","b","c","d","hki_total","e","f","g","kle_total","h","j","klw_total","k","l","m","s","t","ntw_total","n","p","q","r","nte_total","total"];
 
 
 glob(paths+"*.+(xlsx|xls)", function (er, files) {
