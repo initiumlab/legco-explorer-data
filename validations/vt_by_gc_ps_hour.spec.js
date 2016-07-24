@@ -75,3 +75,5 @@ describe('Voter turn out', function() {
         });
     });
 })
+
+//TODO cross-check with electors population
