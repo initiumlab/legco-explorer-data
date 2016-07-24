@@ -49,17 +49,32 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
 //remove the is small poll station columns
 
 var FILES_WITH_SMALL_PS_COLUMNS = [
-  '2012 LCE - GC Voter Turnout% by PS.xlsx',
-'2011 DCE - Voter Turnout by PS.xlsx',
-'2011 DCE - Voter Turnout% by PS.xlsx',
-'2015 DCE - Voter Turnout by PS.xlsx',
-'2015 DCE - Voter Turnout% by PS.xlsx'];
-          if (FILES_WITH_SMALL_PS_COLUMNS.includes(f.substr(f.lastIndexOf('/')+1))
-        ) {
+  '2011 DCE - Voter Turnout by PS.xlsx',
+  '2011 DCE - Voter Turnout% by PS.xlsx',
+  '2015 DCE - Voter Turnout by PS.xlsx',
+  '2015 DCE - Voter Turnout% by PS.xlsx'
+];
+
+var FILES_WITH_PS_NAMES = [
+    '2012 LCE - GC Voter Turnout% by PS.xlsx'
+]
+var fileName = f.substr(f.lastIndexOf('/')+1);
+          if (FILES_WITH_PS_NAMES.includes(fileName))
+         {
+          console.log('removed');
+          console.log(f);
             csvData= csvData
                     .map(function(record) {
                       record.splice(3, 1);
                       record.splice(3, 1);
+                      return record;
+                    });
+          }
+          if(FILES_WITH_SMALL_PS_COLUMNS.includes(fileName)){
+            csvData= csvData
+                    .map(function(record) {
+                      record.splice(4, 1);
+                      record.splice(4, 1);
                       return record;
                     });
           }
