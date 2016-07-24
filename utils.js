@@ -20,7 +20,7 @@ var parseIntIfNumber= function (string) {
   if(_.isNumber(string)){
     return string;
   }
-  if(string.match(/^(\d+,)*[\d]+$/)){
+  if(string.trim().match(/^(\d+,)*[\d]+$/)){
     return parseIntFromData(string);
   }
   return string;
