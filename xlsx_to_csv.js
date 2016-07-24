@@ -44,7 +44,16 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
         postProcessCsvData = function(csvData) {
           console.log('splice');
           var removed =csvData.splice(0,2);
-          if (f === './source/vt_by_gc_ps_hour/official_xlsx/2012 LCE - GC Voter Turnout% by PS.xlsx') {
+//remove the is small poll station columns
+
+var FILES_WITH_SMALL_PS_COLUMNS = [
+  '2012 LCE - GC Voter Turnout% by PS.xlsx',
+'2011 DCE - Voter Turnout by PS.xlsx',
+'2011 DCE - Voter Turnout% by PS.xlsx',
+'2015 DCE - Voter Turnout by PS.xlsx',
+'2015 DCE - Voter Turnout% by PS.xlsx'];
+          if (FILES_WITH_SMALL_PS_COLUMNS.includes(f.substr(f.lastIndexOf('/')+1))
+        ) {
             csvData= csvData
                     .map(function(record) {
                       record.splice(3, 1);
@@ -63,6 +72,7 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
     if (f.startsWith('./source/fr_dc_age_sex/')) {
       fileType = FR_DC_AGE_SEX;
       sheetIndex = 1;
+      headersToAdd = HEADERS[FR_DC_AGE_SEX];
 
       if (f.match(/2014/)) {
         sheetIndex = 0;
@@ -78,7 +88,7 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
         });
         return data;
       }
-      headersToAdd = HEADERS[FR_DC_AGE_SEX];
+
       postProcessCsvData = function(csvData) {
         console.log('post');
         var results = [];
@@ -130,6 +140,12 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
     if (headersToAdd) {
       csvData.unshift(headersToAdd);
     }
+    csvData.forEach(function (r, i) {
+      if(r.length!==csvData[0].length){
+        //TODO header logic
+        throw new Error(`${f} L${i+2} fields count not match expect: ${csvData[0].length} acutal: ${r.length}`)
+      }
+    })
     mkdirp.sync(path.dirname(f).replace(xlsx_folder, 'csv'));
     var targetPath = f.replace(/\.(xlsx|xls)$/, '.csv').replace(xlsx_folder, 'csv');
     console.log(targetPath);
