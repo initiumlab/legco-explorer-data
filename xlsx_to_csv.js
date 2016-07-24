@@ -36,11 +36,13 @@ glob(paths + "*.+(xlsx|xls)", function(er, files) {
     var sheetIndex = 0;
     if (f.startsWith('./source/vt_by_gc_ps_hour/')) {
       headersToAdd=  HEADERS[VT_BY_GC_PS_HOUR];
-      if(f.match(/[^%]/)){
-        fileType = VT_BY_GC_PS_HOUR;
-      }else{
+      if(f.match(/\%/)){
         fileType = VT_BY_GC_PS_HOUR+'_percent';
+      }else{
+        fileType = VT_BY_GC_PS_HOUR;
+
       }
+      console.log(fileType);
         postProcessCsvData = function(csvData) {
           console.log('splice');
           var removed =csvData.splice(0,2);
