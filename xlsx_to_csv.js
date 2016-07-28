@@ -88,15 +88,23 @@ var fileName = f.substr(f.lastIndexOf('/')+1);
 
     if (f.startsWith('./source/fr_dc_age_sex/')) {
       fileType = FR_DC_AGE_SEX;
-      sheetIndex = 1;
+      sheetIndex = 0;
       headersToAdd = HEADERS[FR_DC_AGE_SEX];
 
-      if (f.match(/2014/)) {
-        sheetIndex = 0;
+      if (f.match(/(2005|2015|2016)/)) {
+        sheetIndex = 1;
       }
       function take(row, i) {
         return row.map(function(data) {
           return data[i];
+        });
+      }
+      function combine(row1, row2) {
+        return row1.map(function(cell,i){
+          if(!cell){
+            return row2[i+1];
+          }
+          return cell;
         });
       }
       function insert(data, next) {
@@ -111,16 +119,22 @@ var fileName = f.substr(f.lastIndexOf('/')+1);
         var results = [];
         csvData
           .forEach(function(row, i, rows) {
-            console.log(i);
-            console.log(row);
-            if (row[1] === 'F M' || row[1] === 'M F') {
+            row = row.map(function(s){
+              return s.trim();
+            })
+            if (row[1] && (row[1].replace(/\s/g,'') === 'FM' || row[1].replace(/\s/g,'')  === 'MF')) {
               var split = row.map(function(cell) {
-                return cell.split(/\s{1,2}/);
+                return cell.split(/\s+/);
               }).slice(1);
-              if (f.match(/2016/) || f.match(/2015/)) {
+
+              if(f.match(/(2012|2009|2008|2006)/)){
+                results.push([row[0]].concat(take(split, 0)));
+                results.push([row[0]].concat(combine(take(split, 1),rows[i+1])))
+              }
+              else if (f.match(/(2007|2015|2016)/)) {
                 results.push([row[0]].concat(take(split, 0)));
                 results.push([row[0]].concat(insert(take(split, 1), rows[i + 1])));
-              } else if (!f.match(/2014/)) {
+              } else if (!f.match(/(2010|2011|2014)/)) {
                 results.push([row[0]].concat(take(split, 0)));
                 results.push([row[0]].concat(take(split, 1)));
               }
@@ -133,7 +147,8 @@ var fileName = f.substr(f.lastIndexOf('/')+1);
               row[0] = tmp.substr(0, index - 1);
               row[1] = tmp.substr(index, tmp.length);
               results.push(row);
-            } else if (i > 1 && row[0]) {
+            }  else if (i > 1 && row[0] && row[3]) {
+              //remove footers
               results.push(row);
             }
           });
@@ -160,7 +175,7 @@ var fileName = f.substr(f.lastIndexOf('/')+1);
     csvData.forEach(function (r, i) {
       if(r.length!==csvData[0].length){
         //TODO header logic
-        throw new Error(`${f} L${i+2} fields count not match expect: ${csvData[0].length} acutal: ${r.length}`)
+        throw new Error(`${f} L${i+2} fields count not match expect: ${r} ${csvData[0]} ${csvData[0].length} acutal: ${r.length}`)
       }
     })
     mkdirp.sync(path.dirname(f).replace(xlsx_folder, 'csv'));
